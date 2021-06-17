@@ -39,13 +39,14 @@
 								<li><a href="music.jsp">MUSIC</a></li>
 								<li><a href="ebook.jsp">E-BOOK</a></li>
 								<li><a href="#emotion">EMOTION</a></li>
+								
+								<% if (info == null) { %>
 								<li><a href="#login">LOGIN</a></li>
 								<li><a href="#join">JOIN</a></li>
-								<%-- <% if (info != null) { %> --%>
-								<%-- <% } else { %> --%>
+								<% } else { %>
 								<li><a href="#mypage">MyPage</a></li>
-								<li><a href="#">Logout</a></li>
-								<%-- <% } %> --%>
+								<li><a href="logoutServ">Logout</a></li>
+								<% } %>
 								 
 								
 							</ul>
@@ -149,19 +150,19 @@
 								<div class="fields">
 									<div class="field half">
 										<label for="userid">Name</label>
-										<h2>¹è¿µÈÆ</h2>
+										<h2><%= info.getName() %></h2>
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
-										<h3><u>younghun@naver.com</u></h3>
+										<h3><u><%= info.getEmail() %></u></h3>
 									</div>
 									<div class="field half">
 										<label for="phone">Phone</label>
-										<h3>010-5882-8585</h3>
+										<h3><%= info.getPhone() %></h3>
 									</div>										
 									<div class="field half">
 										<label for="name">Gender</label>
-										<h3>Male</h3>
+										<h3><%= info.getGender() %></h3>
 									</div>
 									<!-- <div class="field half">
 										<label for="gender">Gender</label>

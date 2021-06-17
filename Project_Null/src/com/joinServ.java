@@ -21,10 +21,10 @@ public class joinServ extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
-		String gender = request.getParameter("gender");
 		String name = request.getParameter("name");
+		String gender = request.getParameter("gender");
 		
-		MemDTO dto = new MemDTO(id, pw, email, phone, gender, name);
+		MemDTO dto = new MemDTO(id, pw, email, phone, name, gender);
 		MemDAO dao = new MemDAO();
 		int cnt = dao.join(dto);
 		

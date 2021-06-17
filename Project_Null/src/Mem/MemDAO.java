@@ -61,12 +61,6 @@ public class MemDAO {
 
 			cnt = psmt.executeUpdate();
 
-			if (cnt > 0) {
-				System.out.println("회원가입 성공");
-			} else {
-				System.out.println("회원가입 실패");
-			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -94,8 +88,12 @@ public MemDTO login(MemDTO dto) {
 			if (rs.next()) {
 				String login_id = rs.getString(1);
 				String login_pw = rs.getString(2);
+				String login_email = rs.getString(3);
+				String login_phone = rs.getString(4);
+				String login_name = rs.getString(5);
+				String login_gender = rs.getString(6);
 				
-				info = new MemDTO(login_id, login_pw);
+				info = new MemDTO(login_id, login_pw, login_email, login_phone, login_name, login_gender);
 			}
 
 		} catch (Exception e) {
