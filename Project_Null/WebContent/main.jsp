@@ -40,6 +40,7 @@
 								<li><a href="ebook.jsp">E-BOOK</a></li>
 								<li><a href="#emotion">EMOTION</a></li>
 								<li><a href="#login">LOGIN</a></li>
+								<li><a href="#join">JOIN</a></li>
 								<%-- <% if (info != null) { %> --%>
 								<%-- <% } else { %> --%>
 								<li><a href="#mypage">MyPage</a></li>
@@ -99,33 +100,33 @@
 						<!-- Join -->
 							<article id="join">
 								<h2 class="major">JOIN</h2>
-								<form method="post" action="#">
+								<form action="joinServ" method="post">
 									<div class="fields">
 										<div class="field half">
 											<label for="userid">ID</label>
-											<input type="text" name="userid" id="userid" placeholder="ex) younghunbae" />
+											<input type="text" name="userid" id="usersid" placeholder="ex) younghunbae" />
 										</div>
 										<div class="field half">
-											<label for="password">Password</label>
-											<input type="password" name="pw" id="pw" />
+											<label for="userpassword">Password</label>
+											<input type="password" name="pw" id="userpw" />
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" placeholder="ex) example@abc.com" />
+											<label for="useremail">Email</label>
+											<input type="email" name="email" id="useremail" placeholder="ex) example@abc.com" />
 										</div>
 										<div class="field half">
-											<label for="phone">Phone</label>
-											<input type="text" name="phone" id="phone" placeholder="ex) 010-5882-6974" />
+											<label for="userphone">Phone</label>
+											<input type="text" name="phone" id="userphone" placeholder="ex) 010-5882-6974" />
 										</div>
 										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" placeholder="ex) ¹è¿µÈÆ" />
+											<label for="username">Name</label>
+											<input type="text" name="name" id="nameuser" placeholder="ex) ¹è¿µÈÆ" />
 										</div>
 										<div class="field half">
-											<label for="gender">Gender</label>
-											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+											<label for="usergender">Gender</label>
+											<input type="radio" id="demo-priority-low" name="gender" value="male" checked>
 											<label for="demo-priority-low">Male</label>
-											<input type="radio" id="demo-priority-high" name="demo-priority">
+											<input type="radio" id="demo-priority-high" name="gender" value="female">
 											<label for="demo-priority-high">Female</label>
 										</div>
 									</div>

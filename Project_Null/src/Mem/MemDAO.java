@@ -12,7 +12,7 @@ public class MemDAO {
 	ResultSet rs = null;
 	int cnt = 0;
 
-	private void getConn() {
+	public void getConn() {
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -28,7 +28,7 @@ public class MemDAO {
 		
 	}
 	
-	private void close() {
+	public void close() {
 		try {
 			if (rs != null) {
 				rs.close();
@@ -43,8 +43,40 @@ public class MemDAO {
 			e.printStackTrace();
 		}
 	}
-	
-	public MemDTO login(MemDTO dto) {
+
+	public int join(MemDTO dto) {
+		getConn();
+		
+		try {
+
+			String sql = "INSERT INTO SYS_MEMBER VALUES(?,?,?,?,?,?)";
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1, dto.getId());
+			psmt.setString(2, dto.getPw());
+			psmt.setString(3, dto.getEmail());
+			psmt.setString(4, dto.getPhone());
+			psmt.setString(5, dto.getGender());
+			psmt.setString(6, dto.getName());
+
+			cnt = psmt.executeUpdate();
+
+			if (cnt > 0) {
+				System.out.println("회원가입 성공");
+			} else {
+				System.out.println("회원가입 실패");
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return cnt;
+		
+	}
+
+public MemDTO login(MemDTO dto) {
 		
 		getConn();
 		
@@ -72,7 +104,5 @@ public class MemDAO {
 			close();
 		}
 		return info;
-		
-
 	}
 }
