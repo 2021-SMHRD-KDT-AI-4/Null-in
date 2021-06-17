@@ -1,3 +1,4 @@
+<%@page import="Mem.MemDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -15,7 +16,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
+		<%
+			MemDTO info = (MemDTO)session.getAttribute("info");
+		%>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -37,8 +40,13 @@
 								<li><a href="ebook.jsp">E-BOOK</a></li>
 								<li><a href="#emotion">EMOTION</a></li>
 								<li><a href="#login">LOGIN</a></li>
-								<li><a href="#join">JOIN</a></li>
+								<%-- <% if (info != null) { %> --%>
+								<%-- <% } else { %> --%>
 								<li><a href="#mypage">MyPage</a></li>
+								<li><a href="#">Logout</a></li>
+								<%-- <% } %> --%>
+								 
+								
 							</ul>
 						</nav>
 					</header>
@@ -53,6 +61,7 @@
 							</article> -->
 
 						<!-- E-Book -->
+													
 							<!-- <article id="ebook">
 								<h2 class="major">E-BOOK</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
@@ -69,7 +78,7 @@
 						<!-- Login -->
 							<article id="login">
 								<h2 class="major">LOGIN</h2>
-								<form method="post" action="#">
+								<form method="post" action="loginServ">
 									<div class="fields">
 										<div class="field half">
 											<label for="userid">ID</label>
@@ -132,8 +141,7 @@
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul> -->
 							</article>
-							
-							
+					
 						<!-- MyPage -->
 							<article id="mypage">
 								<h2 class="major">MyPage</h2>
