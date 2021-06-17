@@ -13,8 +13,8 @@
 	<body class="is-preload">
 		<% 
 			ArrayList<String> test = new ArrayList<>();	
+			test.add("그레이의 50가지 그림자");
 			test.add("E.L. 제임스");
-			test.add("그레이의 50가지 그림자 ");
 			test.add("시공사");
 			test.add("쾌락남녀");
 			test.add("김광호");
@@ -41,8 +41,8 @@
 							<table>
 								<thead>
 									<tr>
-										<th>Author</th>
 										<th>Title</th>
+										<th>Author</th>
 										<th>Publisher</th>
 										<th>Select</th>
 									</tr>
@@ -75,7 +75,7 @@
 								</tbody>
 								<tfoot>
 									<tr>
-										<td colspan="2"></td>
+										<td colspan="1"></td>
 										<td class="actions"><a href="main.jsp" class="button primary">Back</a></td>
 									</tr>
 								</tfoot>
@@ -85,7 +85,7 @@
 					</section>
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Designed Null'in. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Designed Null'in. From <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>

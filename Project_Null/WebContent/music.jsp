@@ -79,7 +79,7 @@
 					</section>
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Designed Null'in. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Designed Null'in. From <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>

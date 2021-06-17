@@ -38,7 +38,7 @@
 								<li><a href="#emotion">EMOTION</a></li>
 								<li><a href="#login">LOGIN</a></li>
 								<li><a href="#join">JOIN</a></li>
-								<!-- <li><a href="#elements">Elements</a></li> -->
+								<li><a href="#mypage">MyPage</a></li>
 							</ul>
 						</nav>
 					</header>
@@ -47,24 +47,24 @@
 					<div id="main">
 
 						<!-- Music -->
-							<article id="music">
+							<!-- <article id="music">
 								<h2 class="major">MUSIC</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-							</article>
+							</article> -->
 
 						<!-- E-Book -->
-							<article id="ebook">
+							<!-- <article id="ebook">
 								<h2 class="major">E-BOOK</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
 								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
+							</article> -->
 						<!-- Emotion -->
-							<article id="emotion">
+							<!-- <article id="emotion">
 								<h2 class="major">EMOTION</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
+							</article> -->
 							
 						<!-- Login -->
 							<article id="login">
@@ -108,7 +108,11 @@
 											<label for="phone">Phone</label>
 											<input type="text" name="phone" id="phone" placeholder="ex) 010-5882-6974" />
 										</div>
-										<div class="field">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" placeholder="ex) ¹è¿µÈÆ" />
+										</div>
+										<div class="field half">
 											<label for="gender">Gender</label>
 											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
 											<label for="demo-priority-low">Male</label>
@@ -128,7 +132,38 @@
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul> -->
 							</article>
-
+							
+							
+						<!-- MyPage -->
+							<article id="mypage">
+								<h2 class="major">MyPage</h2>
+								<div class="fields">
+									<div class="field half">
+										<label for="userid">Name</label>
+										<h2>¹è¿µÈÆ</h2>
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<h3><u>younghun@naver.com</u></h3>
+									</div>
+									<div class="field half">
+										<label for="phone">Phone</label>
+										<h3>010-5882-8585</h3>
+									</div>										
+									<div class="field half">
+										<label for="name">Gender</label>
+										<h3>Male</h3>
+									</div>
+									<!-- <div class="field half">
+										<label for="gender">Gender</label>
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Male</label>
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">Female</label>
+									</div> -->
+								</div>
+								
+							</article>
 						<!-- Elements -->
 							<article id="elements">
 								<h2 class="major">Elements</h2>
@@ -375,7 +410,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Designed Null'in. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Designed Null'in. From <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
