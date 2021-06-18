@@ -148,7 +148,9 @@
 							<article id="mypage">
 								<h2 class="major">MyPage</h2>
 								<div class="fields">
-									<div class="field half">
+								<!-- 해당 코드를 입력하면 java.lang.NullPointerException 에러 발생 -->
+								<!-- 그런데 실행이 잘 될 때도 있음 -->
+									<%-- <div class="field half">
 										<label for="userid">Name</label>
 										<h2><%= info.getName() %></h2>
 									</div>
@@ -163,14 +165,7 @@
 									<div class="field half">
 										<label for="name">Gender</label>
 										<h3><%= info.getGender() %></h3>
-									</div>
-									<!-- <div class="field half">
-										<label for="gender">Gender</label>
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Male</label>
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">Female</label>
-									</div> -->
+									</div> --%>
 								</div>
 								
 							</article>
