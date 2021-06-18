@@ -36,14 +36,14 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="music.jsp">MUSIC</a></li>
-								<li><a href="ebook.jsp">E-BOOK</a></li>
-								<li><a href="#emotion">EMOTION</a></li>
-								
 								<% if (info == null) { %>
+								<li><a href="#intro">INTRO</a></li>
 								<li><a href="#login">LOGIN</a></li>
 								<li><a href="#join">JOIN</a></li>
 								<% } else { %>
+								<li><a href="music.jsp">MUSIC</a></li>
+								<li><a href="ebook.jsp">E-BOOK</a></li>
+								<li><a href="#emotion">EMOTION</a></li>
 								<li><a href="#mypage">MyPage</a></li>
 								<li><a href="logoutServ">Logout</a></li>
 								<% } %>
@@ -64,12 +64,12 @@
 
 						<!-- E-Book -->
 													
-							<!-- <article id="ebook">
-								<h2 class="major">E-BOOK</h2>
+							<article id="intro">
+								<h2 class="major">INTRO</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+								<p>여러분이 원하는 음악과 E-BOOK을 추천해 드립니다.</p>
 								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article> -->
+							</article>
 						<!-- Emotion -->
 							<!-- <article id="emotion">
 								<h2 class="major">EMOTION</h2>
@@ -150,22 +150,30 @@
 								<div class="fields">
 								<!-- 해당 코드를 입력하면 java.lang.NullPointerException 에러 발생 -->
 								<!-- 그런데 실행이 잘 될 때도 있음 -->
-									<%-- <div class="field half">
+									<div class="field half">
 										<label for="userid">Name</label>
+										<% if(info != null) { %>
 										<h2><%= info.getName() %></h2>
+										<% } %>
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
+										<% if(info != null) { %>
 										<h3><u><%= info.getEmail() %></u></h3>
+										<% } %>
 									</div>
 									<div class="field half">
 										<label for="phone">Phone</label>
+										<% if(info != null) { %>
 										<h3><%= info.getPhone() %></h3>
+										<% } %>
 									</div>										
 									<div class="field half">
 										<label for="name">Gender</label>
+										<% if(info != null) { %>
 										<h3><%= info.getGender() %></h3>
-									</div> --%>
+										<% } %>
+									</div>
 								</div>
 								
 							</article>

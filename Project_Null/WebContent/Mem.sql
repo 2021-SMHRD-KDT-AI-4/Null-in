@@ -9,7 +9,7 @@ CREATE TABLE SYS_MEMBER(
 
 INSERT INTO SYS_MEMBER VALUES(
 	'admin', '1234', 'abc@abc.com',
-	'011-2345-6789', 'Male', 'ȫ�浿'
+	'011-2345-6789', 'ȫ�浿', 'male'
 );
 
 SELECT * FROM SYS_MEMBER;
