@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Mem.MemDAO;
-import Mem.MemDTO;
+import DAO.MemDAO;
+import DTO.MemDTO;
 
 @WebServlet("/joinServ")
 public class joinServ extends HttpServlet {

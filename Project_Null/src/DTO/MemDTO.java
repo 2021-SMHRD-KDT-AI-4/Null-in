@@ -1,4 +1,4 @@
-package Mem;
+package DTO;
 
 public class MemDTO {
 	private String id;

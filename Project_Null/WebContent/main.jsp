@@ -1,4 +1,4 @@
-<%@page import="Mem.MemDTO"%>
+<%@page import="DTO.MemDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE HTML>
@@ -17,7 +17,7 @@
 	</head>
 	<body class="is-preload">
 		<%
-			MemDTO info = (MemDTO)session.getAttribute("info");
+			DTO.MemDTO info = (DTO.MemDTO)session.getAttribute("info");
 		%>
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -154,23 +154,23 @@
 										<label for="userid">Name</label>
 										<% if(info != null) { %>
 										<h2><%= info.getName() %></h2>
-										<% } %>
+										<%-- <% } %> --%>
 									</div>
 									<div class="field half">
 										<label for="email">Email</label>
-										<% if(info != null) { %>
+										<%-- <% if(info != null) { %> --%>
 										<h3><u><%= info.getEmail() %></u></h3>
-										<% } %>
+										<%-- <% } %> --%>
 									</div>
 									<div class="field half">
 										<label for="phone">Phone</label>
-										<% if(info != null) { %>
+										<%-- <% if(info != null) { %> --%>
 										<h3><%= info.getPhone() %></h3>
-										<% } %>
+										<%-- <% } %> --%>
 									</div>										
 									<div class="field half">
 										<label for="name">Gender</label>
-										<% if(info != null) { %>
+										<%-- <% if(info != null) { %> --%>
 										<h3><%= info.getGender() %></h3>
 										<% } %>
 									</div>

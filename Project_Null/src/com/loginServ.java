@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import Mem.MemDAO;
-import Mem.MemDTO;
+import DAO.MemDAO;
+import DTO.MemDTO;
 
 @WebServlet("/loginServ")
 public class loginServ extends HttpServlet {
