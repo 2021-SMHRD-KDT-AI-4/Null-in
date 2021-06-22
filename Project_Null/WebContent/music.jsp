@@ -1,3 +1,5 @@
+<%@page import="DAO.MusicDAO"%>
+<%@page import="DTO.MusicDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -43,76 +45,88 @@
 			}
 			.tabmenu{ 
 			  display: flex;
-			  max-width: 1000px; 
+			  flex-wrap: wrap;
+			  max-width: 2000px; 
 			  margin: 0 auto; 
-			  position: static; 
+			  padding: 20px;
+			  position: absolute; 
+			  text-align:left;
+			  left:20%;
+			  right:20%;
+			  box-sizing: border-box; 
+			  border : 3px solid #f9f9f9;
+			  background-color: rgba(27, 31, 34, 0.85);
 			}
-			.tabCon{
+			 .tabCon{
 			  display: flex;
-			  flex: wrap;
 			  text-align:left; 
 			  padding: 20px;
 			  position: absolute; 
 			  left:20%;
 			  right:20%;
-			  box-sizing: border-box; 
-			  border : 3px solid #f9f9f9;
-			}
+			} 
 			.music_list {
 				flex: 2;
 				overflow-y: auto;
-				height: 400px;
+				height: 550px;
 				width: calc(100% / 3 - 0.5rem);
 			}
 			.music_lyrics {
 				flex: 2;
 				overflow-y: auto;
+				height: 550px;
 				width: calc(100% / 3 - 0.5rem);
+				
 			}
 			.music_colors {
 				flex: 2;
 				overflow-y: auto;
-				height: 400px;
+				height: 550px;
+				text-align: center;
 				width: calc(100% / 3 - 0.5rem);
+			}
+			.txt1 {
+				line-height: 2;
+				letter-spacing: 0.1rem;
 			}
 		</style>
 	</head>
 	<body class="is-preload">
 		<% 
-			ArrayList<String> test = new ArrayList<>();
+			String music_title = "Blind(Feat. Rachel Lim)";
+			String music_artist = "JIDA(¡ˆ¥Ÿ)";
+			int num = 1;
+			MusicDTO info = (MusicDTO)session.getAttribute("info");
+			MusicDAO dao = new MusicDAO();
+			ArrayList<MusicDTO> list = dao.music_lyrics(num);
 		%>
+		
 		<!-- Wrapper -->
 			<div id="wrapper1">
-
-				<!-- Header -->
-					
+					<span id="board_num">MUSIC LIST</span>
 					
 					<div class="tabmenu">
-					  
-					      <div class="tabCon">
-					      	
-						  </div>
 							  <div class="music_list">
-							  	<div>div≈◊Ω∫∆Æ</div>
 							  	<div>
-							  		<% for (int i = 0; i<20; i++) { %>
-							  		<div>
-							  			<% out.println("<a href=''>"+"≥Î∑°º±≈√"+"</a>"); %>
+							  		<%-- <% for (int i = 0; i<20; i++) { %> --%>
+							  		<div class="txt1">
+							  			<% out.println("<a href='' onclick='music_view()'>"+"Blind(Feat. Rachel Lim)<br/>JIDA(¡ˆ¥Ÿ)"+"</a>"); %>
 							  		</div>
-							      	 <% } %>
+							      	 <%-- <% } %> --%>
 							  	</div>
 							  </div>
 							  <div class="music_lyrics">
-							  	<div>
-							  		§∑§§§±§°§§§∑§°§©§§§∞§§§∑§©§§dasssssssssssssssssssss.sssssssssssssss.ssssssssadfsadasfgagfa.gagwagawgwagwagwagw.agwagwagwagw.agwagwagwag.awgawgaw
+							  	<% for (int i = 0 ; i<list.size(); i++) { %>
+							  	<div class="txt1">
+							  	<%= list.get(i).getMusicLyric() %>
 							  	</div>
+							  	<% } %>
 							  </div>
 							  <div class="music_colors">
 							  	<div>
-							  		ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...ªÏ∑¡¡‡...
+							  		ªˆ±Ú
 							  	</div>
 							  </div>
-						  </div>
 					</div>
 					
 				<!-- Footer -->
@@ -131,6 +145,22 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<!-- <script type="text/javascript">
+				function music_view(){
+						$.ajax({
+							type : "post",
+							url : "musicLyricView",
+							dataType : "text",
+							success : function(data){
+								var output = '';
+								output += '<span>',
+								output += music_lyrics;
+								output += '</span>'
+								$('#result').html(output);
+							}
+						
+						});
+					}
+			</script> -->
 	</body>
 </html>

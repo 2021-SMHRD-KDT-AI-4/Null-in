@@ -22,7 +22,7 @@ CREATE TABLE SYS_MUSIC_INFO (
 	MUSIC_TITLE		VARCHAR2(100) NOT NULL,
 	MUSIC_ARTIST	VARCHAR2(100) NOT NULL,
 	ALBUM			VARCHAR2(100) NOT NULL,
-	LYRIC			VARCHAR2(3000) NOT NULL,
+	LYRIC			VARCHAR2(4000) NOT NULL,
 	MUSIC_EMOTION	VARCHAR2(100) NOT NULL,
 	MUSIC_EMOTION_COLOR	VARCHAR2(100) NOT NULL,
 	MUSIC_GENRE		VARCHAR2(100) NOT NULL
@@ -30,7 +30,7 @@ CREATE TABLE SYS_MUSIC_INFO (
 
 DROP TABLE SYS_MUSIC_INFO;
 
-DROP SEQUENCE SYS_MUSIC_INFO;
+DROP SEQUENCE SYS_MUSIC_NUM;
 
 SELECT * FROM SYS_MUSIC_INFO;
 
@@ -47,7 +47,7 @@ INSERT INTO SYS_MUSIC_INFO VALUES (
 	달빛이 빛나면 하늘은 마법에 걸려요
 	And it’s the light covering my sight
 	이제 내 눈은 달빛으로 덮여지죠
-	But not so much 
+	But not so much
 	하지만 별거아니에요
 	that I could have you out my mind
 	그대 생각을 지우는 것 보다 말이죠
@@ -55,19 +55,18 @@ INSERT INTO SYS_MUSIC_INFO VALUES (
 	왜인지는 모르겠어요
 	You make me wonder how you even got my heart
 	당신이 어떻게 내 마음을 가져갔는지
-	
+
 	I’ll let you for a while
 	잠시 동안만 당신을 놓아줄게요
 	I’m blinded by the night you left behind
 	당신이 남긴 밤에 눈이 멀어버렸어요
-	
 	Found myself in everything you are
 	당신이 떠난 자리에 서있는 나를 발견했죠
 	Maybe some time later, I’ll be fine
 	아마 언젠간 괜찮아질거예요
 	But I’ll let you go some other night
 	또 다른 밤이 온다면 그때 보내줄게요
-	
+
 	I’m blinded by your night
 	당신이 남긴 밤에 눈이 멀었어요
 	Maybe it’s a wish that I can’t let go
@@ -108,5 +107,6 @@ INSERT INTO SYS_MUSIC_INFO VALUES (
 	'그리움', '006400', 'R&B'
 );
 
+DELETE FROM SYS_MUSIC_INFO WHERE ALBUM = 'FADE AWAY';
 
 
