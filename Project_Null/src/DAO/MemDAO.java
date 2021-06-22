@@ -51,7 +51,7 @@ public class MemDAO {
 		
 		try {
 
-			String sql = "INSERT INTO SYS_MEMBER VALUES(?,?,?,?,?,?)";
+			String sql = "INSERT INTO SYS_MEMBER VALUES(?,?,?,?,?)";
 			psmt = conn.prepareStatement(sql);
 			
 			psmt.setString(1, dto.getId());
@@ -59,7 +59,6 @@ public class MemDAO {
 			psmt.setString(3, dto.getEmail());
 			psmt.setString(4, dto.getPhone());
 			psmt.setString(5, dto.getGender());
-			psmt.setString(6, dto.getName());
 
 			cnt = psmt.executeUpdate();
 
@@ -72,7 +71,7 @@ public class MemDAO {
 		
 	}
 
-public MemDTO login(MemDTO dto) {
+	public MemDTO login(MemDTO dto) {
 		
 		getConn();
 		
@@ -92,10 +91,9 @@ public MemDTO login(MemDTO dto) {
 				String login_pw = rs.getString(2);
 				String login_email = rs.getString(3);
 				String login_phone = rs.getString(4);
-				String login_name = rs.getString(5);
-				String login_gender = rs.getString(6);
+				String login_gender = rs.getString(5);
 				
-				info = new MemDTO(login_id, login_pw, login_email, login_phone, login_name, login_gender);
+				info = new MemDTO(login_id, login_pw, login_email, login_phone, login_gender);
 			}
 
 		} catch (Exception e) {

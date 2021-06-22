@@ -14,6 +14,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style type="text/css">
+			#categ {
+				display: block;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		<%
@@ -97,7 +102,6 @@
 									</ul>
 								</form>
 							</article>
-
 						<!-- Join -->
 							<article id="join">
 								<h2 class="major">JOIN</h2>
@@ -119,11 +123,7 @@
 											<label for="userphone">Phone</label>
 											<input type="text" name="phone" id="userphone" placeholder="ex) 010-5882-6974" />
 										</div>
-										<div class="field half">
-											<label for="username">Name</label>
-											<input type="text" name="name" id="nameuser" placeholder="ex) 배영훈" />
-										</div>
-										<div class="field half">
+										<div class="field">
 											<label for="usergender">Gender</label>
 											<input type="radio" id="demo-priority-low" name="gender" value="male" checked>
 											<label for="demo-priority-low">Male</label>
@@ -146,36 +146,25 @@
 					
 						<!-- MyPage -->
 							<article id="mypage">
+								<form action="" method="post">
 								<h2 class="major">MyPage</h2>
 								<div class="fields">
-								<!-- 해당 코드를 입력하면 java.lang.NullPointerException 에러 발생 -->
-								<!-- 그런데 실행이 잘 될 때도 있음 -->
 									<div class="field half">
-										<label for="userid">Name</label>
 										<% if(info != null) { %>
-										<h2><%= info.getName() %></h2>
-										<%-- <% } %> --%>
-									</div>
-									<div class="field half">
 										<label for="email">Email</label>
-										<%-- <% if(info != null) { %> --%>
 										<h3><u><%= info.getEmail() %></u></h3>
-										<%-- <% } %> --%>
 									</div>
 									<div class="field half">
 										<label for="phone">Phone</label>
-										<%-- <% if(info != null) { %> --%>
 										<h3><%= info.getPhone() %></h3>
-										<%-- <% } %> --%>
-									</div>										
+									</div>
 									<div class="field half">
 										<label for="name">Gender</label>
-										<%-- <% if(info != null) { %> --%>
 										<h3><%= info.getGender() %></h3>
 										<% } %>
 									</div>
 								</div>
-								
+								</form>
 							</article>
 						<!-- Elements -->
 							<article id="elements">
@@ -380,7 +369,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
 											</div>
 											<div class="field">
-												<label for="demo-category">Category</label>
+											<label for="demo-category" id="categ">Category</label>
 												<select name="demo-category" id="demo-category">
 													<option value="">-</option>
 													<option value="1">Manufacturing</option>
@@ -437,6 +426,5 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>

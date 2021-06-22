@@ -5,23 +5,20 @@ public class MemDTO {
 	private String pw;
 	private String email;
 	private String phone;
-	private String name;
 	private String gender;
 	
-	public MemDTO(String id, String pw, String email, String phone, String name, String gender) {
+	public MemDTO(String id, String pw, String email, String phone, String gender) {
 		this.id = id;
 		this.pw = pw;
 		this.email = email;
 		this.phone = phone;
-		this.name = name;
 		this.gender = gender;
 	}
 
-	public MemDTO(String id, String email, String phone, String name, String gender) {
+	public MemDTO(String id, String email, String phone, String gender) {
 		this.id = id;
 		this.email = email;
 		this.phone = phone;
-		this.name = name;
 		this.gender = gender;
 	}
 	
@@ -60,14 +57,6 @@ public class MemDTO {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getGender() {
